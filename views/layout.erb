@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+
+    <title>Blog Posts</title>
+
+  </head>
+  <body>
+
+    <!-- LAYOUT ERB page is like a template which has the bits of HTML that will appear on every page.
+          every GRFC player's uniform is the same template design but each player will have small individual
+        differences. This layout erb file is making the template for our rugby uniforms. It puts the bolerplate
+      and the navbar on each page so makes our code dry    -->
+    <!-- This bit of Ruby renders the navbar on each page -->
+    <%= erb(:"partials/navigation", :layout => false)  %>
+
+<!-- Sinatra looks for the layout file and puts the stuff that's in index.erb here in place of yield -->
+    <%= yield %>
+  </body>
+</html>
