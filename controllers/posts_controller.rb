@@ -1,3 +1,7 @@
+
+require "sinatra"
+require "sinatra/reloader"
+
 #only camelCase thing in Ruby is class names
 class PostsController < Sinatra::Base
   #telling Ruby to go to Sinatra and get a specific class from it called Base.

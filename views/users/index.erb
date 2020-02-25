@@ -1,0 +1,20 @@
+
+<!-- INJECT SOME RUBY into the html LIKE THIS by putitng an ice cream cone in between the HTML tags you want to change -->
+<!-- @title is an instance variable that you call on in the ruby file going hey I want to change this! You want an
+instance varibale because thsi kind of var is accessible to the ERB file aswell and that way Vivian can see it
+to be able to style the page properly -->
+
+
+  <h1>Hello welcome to the Users' index page!</h1>
+  <!-- ERB IS GOING TO LOOK for this file -->
+  <!-- when we make get request to "/", we want to see ths]is file -->
+
+
+  <% @users.each do |post| %>
+  <div>
+    <h3> <%= user[:first_name] %></h3>
+    <p> <%=  user[:last_name]   %></p>
+
+  </div>
+
+  <% end %>
